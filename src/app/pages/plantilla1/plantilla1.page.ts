@@ -10,7 +10,7 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class Plantilla1Page implements OnInit {
 
-  id2: string;
+  id2: any;
 
   componentes: Componente[] = [];
 
@@ -51,10 +51,20 @@ export class Plantilla1Page implements OnInit {
     this.id2 = this.activatedRoute.snapshot.paramMap.get('id');
     console.log(this.id2);
 
+    this.Comprueba();
   }
 
   toggleMenu() {
     this.menuCtrl.toggle();
   }
 
+  Comprueba() {
+    if (this.id2 == 'PuntosR')
+    { 
+      this.id2 = this.PuntosR;
+    } else if (this.id2 == 'PeligroE')
+    {
+      this.id2 = this.PeligroE;
+    }
+    }//fin del metodo
 }
