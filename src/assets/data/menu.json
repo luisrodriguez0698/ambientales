@@ -1,0 +1,35 @@
+[{
+        "icon": "home",
+        "name": "Inicio",
+        "routerLink": "/",
+        "id": "inicio"
+    },
+    {
+        "icon": "compass",
+        "name": "Puntos de Reciclaje",
+        "routerLink": "/plantilla1",
+        "id": "PuntosR"
+    },
+    {
+        "icon": "warning",
+        "name": "Peligro de extincion",
+        "routerLink": "/plantilla1",
+        "id": "PeligroE"
+    },
+    {
+        "icon": "play",
+        "name": "Videos",
+        "routerLink": "/videos",
+        "id": "Videos"
+    },
+    {
+        "icon": "game-controller",
+        "name": "Desafio Ambiental",
+        "routerLink": "/"
+    },
+    {
+        "icon": "exit",
+        "name": "Cerrar Sesion",
+        "routerLink": "/"
+    }
+]

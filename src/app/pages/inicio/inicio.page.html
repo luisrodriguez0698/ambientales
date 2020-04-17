@@ -1,0 +1,21 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-button (click)="toggleMenu()">
+                <ion-icon slot="icon-only" name="menu"></ion-icon>
+            </ion-button>
+        </ion-buttons>
+        <ion-title> Inicio </ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen>
+    <ion-card>
+        <img src="../../../assets/img/logo.webp" alt="logo" width="100%" height="60%">
+        <ion-card-header>
+            <ion-card-title>¿Que es el calentamiento global?</ion-card-title>
+            <ion-card-subtitle>el calentamiento global es el aumento a largo plazo de la temperatura</ion-card-subtitle>
+        </ion-card-header>
+    </ion-card>
+    <ion-button [routerLink]="['/plantilla1', 'PuntosR']">Videos</ion-button>
+</ion-content>

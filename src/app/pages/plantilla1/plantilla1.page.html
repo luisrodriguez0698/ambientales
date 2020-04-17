@@ -1,0 +1,30 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-button (click)="toggleMenu()">
+                <ion-icon slot="icon-only" name="menu"></ion-icon>
+            </ion-button>
+        </ion-buttons>
+        <ion-title> Plantilla </ion-title>
+        <ion-buttons slot="end">
+            <ion-back-button defaultHref="/"></ion-back-button>
+        </ion-buttons>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+    <ion-item-group *ngFor="let c of [id2]">
+        <ion-card>
+            <img src="{{c.img}}" alt="imagen">
+            <ion-card-header>
+                <ion-card-subtitle>{{ c.subtitle }}</ion-card-subtitle>
+                <ion-card-title>{{ c.title }}</ion-card-title>
+            </ion-card-header>
+            <ion-card-content>
+                {{ c.desc }}
+            </ion-card-content>
+        </ion-card>
+    </ion-item-group>
+
+</ion-content>
