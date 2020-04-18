@@ -1,8 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MenuController } from '@ionic/angular';
 import { Componente } from '../../interfaces/interfaces';
-import { PuntosR } from '../../interfaces/interfaces';
-import { PeligroE } from '../../interfaces/interfaces';
 import { Observable } from 'rxjs';
 import { DataService } from '../../services/data.service';
 import { ActivatedRoute } from '@angular/router';
@@ -14,27 +12,16 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class Plantilla1Page implements OnInit {
 
-  id2: any;
-
-
+  id2: string;
+  temp: Observable<any>;
   componentes: Componente[] = [];
-
-  PuntosR2: Observable<PuntosR[]>;
-
-  PeligroE2: Observable<PeligroE[]>;
-
 
   constructor( private menuCtrl: MenuController, private activatedRoute: ActivatedRoute,  private dataService: DataService) { }
 
   ngOnInit() {
-
     this.id2 = this.activatedRoute.snapshot.paramMap.get('id');
     console.log(this.id2);
-
     this.Comprueba();
-
-    this.PuntosR2 = this.dataService.getPuntosR();
-    this.PeligroE2 = this.dataService.getPeligroE();
   }
 
   toggleMenu() {
@@ -44,11 +31,10 @@ export class Plantilla1Page implements OnInit {
   Comprueba() {
     if (this.id2 == 'PuntosR')
     {
-      this.id2 = this.PuntosR2;
-      console.log(this.id2);
+      this.temp = this.dataService.getPuntosR();
     } else if (this.id2 == 'PeligroE')
     {
-      this.id2 = this.PeligroE2;
+      this.temp = this.dataService.getPeligroE();
     }
-    }//fin del metodo
+  }//fin del metodo
 }
