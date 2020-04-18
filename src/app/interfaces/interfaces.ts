@@ -6,9 +6,17 @@ export interface Componente {
 }
 
 export interface PuntosR {
-    titulo: string,
-    subtitle: string,
-    title: string,
-    desc: string,
-    img: string
+    titulo: string;
+    subtitle: string;
+    title: string;
+    desc: string;
+    img: string;
+}
+
+export interface PeligroE {
+    titulo: string;
+    subtitle: string;
+    title: string;
+    desc: string;
+    img: string;
 }

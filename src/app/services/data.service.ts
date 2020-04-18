@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Componente } from '../interfaces/interfaces';
 import { PuntosR } from '../interfaces/interfaces';
+import { PeligroE } from '../interfaces/interfaces';
 
 @Injectable({
   providedIn: 'root'
@@ -10,11 +11,15 @@ export class DataService {
 
   constructor( private http: HttpClient ) { }
 
-  getMenuOps(){
+  getMenuOps() {
     return this.http.get<Componente[]>('assets/data/menu.json');
   }
 
-  getPuntosR(){
+  getPuntosR() {
     return this.http.get<PuntosR[]>('assets/data/PuntosR.json');
+  }
+
+  getPeligroE() {
+    return this.http.get<PeligroE[]>('assets/data/PeligroE.json');
   }
 }
