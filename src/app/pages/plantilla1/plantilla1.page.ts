@@ -15,13 +15,12 @@ import { ActivatedRoute } from '@angular/router';
 export class Plantilla1Page implements OnInit {
 
   id2: any;
-
-
+  temp = []
   componentes: Componente[] = [];
 
-  PuntosR2: Observable<PuntosR[]>;
+  PuntosR2 = [];
 
-  PeligroE2: Observable<PeligroE[]>;
+  PeligroE2 = [];
 
 
   constructor( private menuCtrl: MenuController, private activatedRoute: ActivatedRoute,  private dataService: DataService) { }
@@ -30,11 +29,8 @@ export class Plantilla1Page implements OnInit {
 
     this.id2 = this.activatedRoute.snapshot.paramMap.get('id');
     console.log(this.id2);
-
     this.Comprueba();
 
-    this.PuntosR2 = this.dataService.getPuntosR();
-    this.PeligroE2 = this.dataService.getPeligroE();
   }
 
   toggleMenu() {
@@ -44,11 +40,16 @@ export class Plantilla1Page implements OnInit {
   Comprueba() {
     if (this.id2 == 'PuntosR')
     {
-      this.id2 = this.PuntosR2;
-      console.log(this.id2);
+      this.dataService.getPuntosR().subscribe((data: any) => {
+        this.temp = data;       
+      });
+
     } else if (this.id2 == 'PeligroE')
     {
-      this.id2 = this.PeligroE2;
+      this.dataService.getPeligroE().subscribe((data: any) => {
+        this.temp = data;       
+       });
+
     }
     }//fin del metodo
 }
