@@ -16,6 +16,8 @@ export class Plantilla1Page implements OnInit {
 
   id2: any;
 
+  temporal: any;
+
   componentes: Componente[] = [];
 
   PuntosR2: Observable<PuntosR[]>;
