@@ -1,0 +1,14 @@
+[{
+        "titulo": "Puntos de Reciclaje",
+        "subtitle": "PuntosR",
+        "title": "PuntosR",
+        "desc": "este es un animal en peligro de extincion",
+        "img": "../../../assets/img/animales/tigre.jpg"
+    },
+    {
+        "subtitle": "PuntosR 2",
+        "title": "PuntosR 2",
+        "desc": "este es un animal en peligro de extincion 2",
+        "img": "../../../assets/img/animales/tigre.jpg"
+    }
+]

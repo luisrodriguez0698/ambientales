@@ -4,3 +4,11 @@ export interface Componente {
     routerLink: string;
     id: string;
 }
+
+export interface PuntosR {
+    titulo: string,
+    subtitle: string,
+    title: string,
+    desc: string,
+    img: string
+}

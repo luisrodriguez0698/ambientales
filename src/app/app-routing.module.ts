@@ -15,6 +15,10 @@ const routes: Routes = [
     path: 'plantilla1/:id',
     loadChildren: () => import('./pages/plantilla1/plantilla1.module').then( m => m.Plantilla1PageModule)
   },
+  {
+    path: 'plantillainfo',
+    loadChildren: () => import('./pages/plantillainfo/plantillainfo.module').then( m => m.PlantillainfoPageModule)
+  },
 
 ];
 
