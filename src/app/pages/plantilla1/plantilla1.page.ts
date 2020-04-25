@@ -13,7 +13,6 @@ import { PlantillainfoPage } from '../plantillainfo/plantillainfo.page';
 })
 export class Plantilla1Page implements OnInit {
 
-  id: any;
   id2: string;
   temp: Observable<any>;
   componentes: Componente[] = [];
@@ -44,11 +43,21 @@ export class Plantilla1Page implements OnInit {
     }
   }//fin del metodo
 
-  async AbrirModal() {
+  async AbrirModalInfo(id) {
     const modal = await this.modalCtrl.create({
       component: PlantillainfoPage,
       componentProps: {
-        'id': '1'
+        id:id
+      }
+    });
+    return await modal.present();
+  }
+
+  async AbrirModalvideo(id) {
+    const modal = await this.modalCtrl.create({
+      component: PlantillainfoPage,
+      componentProps: {
+        id:id
       }
     });
     return await modal.present();

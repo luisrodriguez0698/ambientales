@@ -12,18 +12,19 @@ import { Observable } from 'rxjs';
 })
 export class PlantillainfoPage implements OnInit {
 
-  @Input() id: any;
+  id: any;
   temp: 1;
 
   PeligroE: Observable<PeligroE[]>;
 
   constructor(private activatedRoute: ActivatedRoute, private modalCtrl: ModalController, private navParams: NavParams, 
     private dataService: DataService) {
-    console.log(navParams.get('id'));
    }
 
   ngOnInit() {
     this.PeligroE = this.dataService.getPeligroE();
+    this.id = this.navParams.get('id');
+    console.log(this.id);
   }
 
 

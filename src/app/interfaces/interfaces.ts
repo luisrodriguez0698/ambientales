@@ -23,6 +23,7 @@ export interface PeligroE {
     desc: string;
     img: string;
     id: string;
+    modal: string;
 }
 
 export interface Videos {
@@ -31,4 +32,6 @@ export interface Videos {
     title: string;
     desc: string;
     img: string;
+    id: string;
+    modal: string;
 }
