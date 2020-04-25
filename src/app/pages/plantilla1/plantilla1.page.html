@@ -15,8 +15,8 @@
 <ion-content>
 
     <ion-item-group *ngFor="let c of temp | async">
-        <ion-card routerLink="/plantillainfo">
-            <img src="{{c.img}}" alt="imagen">
+        <ion-card [routerLink]="c.routerLink">
+            <img src="{{c.img}} " alt="imagen ">
             <ion-card-header>
                 <ion-card-subtitle>{{ c.subtitle }}</ion-card-subtitle>
                 <ion-card-title>{{ c.title }}</ion-card-title>

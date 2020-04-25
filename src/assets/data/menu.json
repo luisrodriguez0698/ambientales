@@ -19,7 +19,7 @@
     {
         "icon": "play",
         "name": "Videos",
-        "routerLink": "/videos",
+        "routerLink": "/plantilla1",
         "id": "Videos"
     },
     {

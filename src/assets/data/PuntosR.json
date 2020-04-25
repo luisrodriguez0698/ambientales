@@ -1,5 +1,6 @@
 [{
         "titulo": "Puntos de Reciclaje",
+        "routerLink": "/ubiaciones",
         "subtitle": "PuntosR",
         "title": "PuntosR",
         "desc": "este es un animal en peligro de extincion",
@@ -8,6 +9,7 @@
     {
         "subtitle": "PuntosR 2",
         "title": "PuntosR 2",
+        "routerLink": "/ubiaciones",
         "desc": "este es un animal en peligro de extincion 2",
         "img": "../../../assets/img/animales/tigre.jpg"
     }

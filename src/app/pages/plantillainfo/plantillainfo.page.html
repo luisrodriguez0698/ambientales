@@ -2,13 +2,13 @@
     <ion-toolbar>
         <ion-title>plantilla info</ion-title>
         <ion-buttons slot="end">
-            <ion-back-button defaultHref="/"></ion-back-button>
+            <ion-button (click)="CerrarModal()">Cerrar</ion-button>
         </ion-buttons>
     </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content *ngFor="let c of PeligroE | async">
 
-    <h2>esta plantiila de prueba de info</h2>
+    <h2>{{ c.title }}</h2>
 
 </ion-content>
