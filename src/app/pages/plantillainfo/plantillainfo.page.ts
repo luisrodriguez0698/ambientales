@@ -2,8 +2,12 @@ import { Component, OnInit, Input } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { ModalController, NavParams } from '@ionic/angular';
 import { DataService } from '../../services/data.service';
-import { PeligroE, PuntosR } from '../../interfaces/interfaces';
+import { PeligroE, PuntosR, Coordenadas } from '../../interfaces/interfaces';
 import { Observable } from 'rxjs';
+import { Geolocation } from '@ionic-native/geolocation/ngx';
+import { Platform, LoadingController } from '@ionic/angular';
+
+declare var google: any;
 
 @Component({
   selector: 'app-plantillainfo',
@@ -12,25 +16,28 @@ import { Observable } from 'rxjs';
 })
 export class PlantillainfoPage implements OnInit {
 
+  map: any;
+  markers: any;
+
   id: any;
   cate: any;
-  temp: any;
-
-  process: any;
-  Res: any;
+  Coorde: any;
 
   PeligroE: Observable<PeligroE[]>;
   PuntosR: Observable<PuntosR[]>;
+  Coordenadas: Observable<Coordenadas[]>;
+
+
   constructor(private activatedRoute: ActivatedRoute, private modalCtrl: ModalController, private navParams: NavParams, 
-    private dataService: DataService) {
+  private dataService: DataService, private geolocation: Geolocation, public platform: Platform, private loadingCtrol: LoadingController) {
    }
 
   ngOnInit() {
     this.id = this.navParams.get('id');
     this.cate = this.navParams.get('cate');
-   
 
     this.Comprobar();
+
   }
 
   CerrarModal() {
@@ -41,47 +48,118 @@ export class PlantillainfoPage implements OnInit {
     console.log(this.cate);
     if (this.cate == "PE") {
       this.PeligroE = this.dataService.getPeligroE();
-    }else if(this.cate == "PR"){
+    } else if(this.cate == "PR"){
       this.PuntosR = this.dataService.getPuntosR();
+      this.Coordenadas = this.dataService.getCoordenadas();
+
+      this.platform.ready().then(() => {
+        this.initPage();
+      });
     }
   }
 
+  async initPage() {
+    this.geolocation.getCurrentPosition().then(result => {
+      this.loadMap(result.coords.latitude, result.coords.longitude);
+    });
   }
 
+  async loadMap(lat, lng) {
 
+    let latLng = new google.maps.LatLng(lat, lng);
 
-  /*
-    Comprobar() {
-    if (this.cate == 'PE') {
-      this.temp = this.VerInfo();
+    let mapOptions =  {
+      center: latLng,
+      zoom: 14
+    };
 
-    }else if (this.cate == 'PR') {
-      this.temp = this.VerMapa();
+    let element = document.getElementById('mape');
 
-    }else if (this.cate == 'V') {
-      this.temp = this.VerVideo();
-    }
+    this.map = new google.maps.Map(element, mapOptions);
+    let marker = new google.maps.Marker({
+      position: latLng,
+      title: 'Mi Ubicacion',
+    })
 
-    }
-
-    VerInfo() {
-      let element = document.getElementById('Info');
-
-      this.PeligroE = this.dataService.getPeligroE();
-
-      let content = `
-      <div *ngFor="let c of PeligroE | async">
-        <h2 *ngIf="c.id==id">{{ c.title }}</h2>
+    let content = `
+      <div id="myid" class="item item-thumbnail-left item-text-wrap">
+        <ion-item>
+          <ion-row>
+            <h6>`+marker.title+`</h6>
+            <img src="../../../assets/icon/img/estacionamiento.jpg" alt="img" width="50%" height="100" align="middle">
+          </ion-row>
+        </ion-item>
       </div>
       `
+      ;
+      this.addInfoWindow(marker, content);
+      marker.setMap(this.map);
+
+      this.loadPoints();
+  }
+
+  loadPoints() {
+    this.markers = [];
+
+    for (const key of Object.keys(this.Coordenadas)) {
+
+      let latLng = new google.maps.LatLng(this.Coordenadas[key].latitude, this.Coordenadas[key].longitude);
+
+      let marker = new google.maps.Marker({
+        position: latLng,
+        title: this.Coordenadas[key].name
+      })
+
+
+      let content = `
+      <ion-header>
+      <center>
+            <img src="../../../assets/icon/img/`+this.Coordenadas[key].Imagen+`" alt="img" width="50%" height="100" align="middle">  
+      </center>
+      </ion-header>
+
+      <div id="myid"  class="item item-thumbnail-left item-text-wrap">
+        <ion-item>
+        <ion-row>
+        <h6>`+this.Coordenadas[key].name+`</h6>
+      </ion-row>
+      </ion-item><ion-row>
+        <h6>`+this.Coordenadas[key].des+`</h6>
+      </ion-row>
+      </ion-item><ion-row>
+        <h6>`+this.Coordenadas[key].tel+`</h6>
+      </ion-row>
+      </ion-item>
+      </div>
+      `
+      ;
+      this.addInfoWindow(marker, content);
+      marker.setMap(this.map);
     }
 
-    VerMapa() {
-    }
+    return this.markers;
+  }
 
-    VerVideo(){
 
-    }
+  addInfoWindow(marker, content) {
+    let infoWindow = new google.maps.InfoWindow({
+      content: content
+    });
 
-  
-  */
+    google.maps.event.addListener(marker, 'click', () => {
+      infoWindow.open(this.map, marker);
+
+      google.maps.event.addListenerOnce(infoWindow, 'domready', () => {
+        document.getElementById('myid').addEventListener('click', () => {
+          this.goToEmpresa(marker)
+        });
+      });
+    })
+  }
+
+
+  goToEmpresa(empresa) {
+    alert('Click');
+  }
+
+  }

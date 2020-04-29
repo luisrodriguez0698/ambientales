@@ -13,6 +13,10 @@ import { HttpClientModule } from '@angular/common/http';
 import { VideoPlayer } from '@ionic-native/video-player/ngx';
 import { Geolocation } from '@ionic-native/geolocation/ngx';
 
+import { environment } from "../environments/environment";
+import { AngularFireModule } from "@angular/fire";
+import { AngularFireAuthModule } from "@angular/fire/auth";
+
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
@@ -21,7 +25,9 @@ import { Geolocation } from '@ionic-native/geolocation/ngx';
     IonicModule.forRoot(),
     AppRoutingModule,
     ComponentsModule,
-    HttpClientModule
+    HttpClientModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireAuthModule
   ],
   providers: [
     StatusBar,

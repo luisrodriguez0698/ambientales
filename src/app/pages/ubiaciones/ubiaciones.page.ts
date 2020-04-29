@@ -103,7 +103,7 @@ export class UbiacionesPage implements OnInit {
       title: 'Mi Ubicacion',
     })
 
-      let content = `
+    let content = `
       <div id="myid" class="item item-thumbnail-left item-text-wrap">
         <ion-item>
           <ion-row>

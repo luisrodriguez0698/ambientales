@@ -14,10 +14,14 @@
         <p *ngIf="c.id==id">{{c.desc}}</p>
     </div>
 
-    <div id="Info" *ngFor="let c of PuntosR | async">
-        <h2 *ngIf="c.id==id">{{c.title}}</h2>
-        <p  *ngIf="c.id==id">Coordenadas</p>
-    </div> 
+    <div id="Info" *ngFor="let c of Coordenadas | async">
+        <h2 *ngIf="c.id==id">{{c.name}}</h2>
+        <p *ngIf="c.id==id">Coordenadas</p>
+    </div>
+
+    <div id="mape">
+
+    </div>
 
 
 </ion-content>

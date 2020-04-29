@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from "@angular/router";
+import { AuthService } from "../../services/auth.service";
+import { AngularFireAuth } from '@angular/fire/auth';
 
 @Component({
   selector: 'app-login',
@@ -8,10 +11,17 @@ import { Component, OnInit } from '@angular/core';
 
 export class LoginPage implements OnInit {
 
-  constructor() { }
+  Usuario = "";
+  Password = "";
+
+  constructor( public router: Router, private authService: AuthService) { }
 
   ngOnInit() {
   }
 
+  Login() {
+    const { Usuario, Password } = this;
+    this.authService.login(Usuario, Password);
+  }
 
 }

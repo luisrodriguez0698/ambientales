@@ -35,3 +35,13 @@ export interface Videos {
     id: string;
     modal: string;
 }
+
+export interface Coordenadas {
+    name: any;
+    des: any;
+    latitude: any;
+    longitude: any;
+    tel: any;
+    Imagen: any;
+    id: any;
+}
