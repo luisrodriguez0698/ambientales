@@ -111,8 +111,6 @@ export class PlantillainfoPage implements OnInit {
         position: latLng,
         title: key.name
       })
-
-
       let content = `
       <ion-header>
       <center>
