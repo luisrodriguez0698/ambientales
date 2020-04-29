@@ -4,16 +4,13 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { PlantillainfoPageRoutingModule } from './plantillainfo-routing.module';
-
 import { PlantillainfoPage } from './plantillainfo.page';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
-    IonicModule,
-    PlantillainfoPageRoutingModule
+    IonicModule
   ],
   declarations: [PlantillainfoPage]
 })

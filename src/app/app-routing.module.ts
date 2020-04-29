@@ -16,10 +16,17 @@ const routes: Routes = [
     loadChildren: () => import('./pages/plantilla1/plantilla1.module').then( m => m.Plantilla1PageModule)
   },
   {
-    path: 'plantillainfo',
-    loadChildren: () => import('./pages/plantillainfo/plantillainfo.module').then( m => m.PlantillainfoPageModule)
+    path: 'ubiaciones',
+    loadChildren: () => import('./pages/ubiaciones/ubiaciones.module').then( m => m.UbiacionesPageModule)
   },
-
+  {
+    path: 'desafio/:id',
+    loadChildren: () => import('./pages/desafio/desafio.module').then( m => m.DesafioPageModule)
+  },
+  {
+    path: 'login',
+    loadChildren: () => import('./pages/login/login.module').then( m => m.LoginPageModule)
+  }
 ];
 
 @NgModule({

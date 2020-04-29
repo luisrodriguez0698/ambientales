@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { Componente } from '../interfaces/interfaces';
 import { PuntosR } from '../interfaces/interfaces';
 import { PeligroE } from '../interfaces/interfaces';
+import { Videos } from '../interfaces/interfaces';
 
 @Injectable({
   providedIn: 'root'
@@ -21,5 +22,9 @@ export class DataService {
 
   getPeligroE() {
     return this.http.get<PeligroE[]>('assets/data/PeligroE.json');
+  }
+
+  getVideos() {
+    return this.http.get<Videos[]>('assets/data/Videos.json');
   }
 }

@@ -1,0 +1,24 @@
+[{
+        "titulo": "Videos",
+        "routerLink": "VideosInfo",
+        "title": "65 blue",
+        "desc": "Un remix sobre la musica antigua y moderna",
+        "img": "../../../assets/videos/miniaturas/tn1.jpg",
+        "cate": "V",
+        "id": "0"
+    },
+    {
+        "title": "Modern Warfare 2",
+        "desc": "trailer del nuevo juego MW2",
+        "img": "../../../assets/videos/miniaturas/mw.jpg",
+        "cate": "V",
+        "id": "1"
+    },
+    {
+        "title": "The Carrier - Zombie",
+        "desc": "Un remix sobre la musica antigua y moderna",
+        "img": "../../../assets/videos/miniaturas/tn2.jpg",
+        "cate": "V",
+        "id": "2"
+    }
+]

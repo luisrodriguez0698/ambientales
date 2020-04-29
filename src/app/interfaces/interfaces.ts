@@ -7,16 +7,31 @@ export interface Componente {
 
 export interface PuntosR {
     titulo: string;
+    routerLink: string;
     subtitle: string;
     title: string;
     desc: string;
     img: string;
+    id: string;
 }
 
 export interface PeligroE {
     titulo: string;
+    routerLink: string;
     subtitle: string;
     title: string;
     desc: string;
     img: string;
+    id: string;
+    modal: string;
+}
+
+export interface Videos {
+    titulo: string;
+    routerLink: string;
+    title: string;
+    desc: string;
+    img: string;
+    id: string;
+    modal: string;
 }
