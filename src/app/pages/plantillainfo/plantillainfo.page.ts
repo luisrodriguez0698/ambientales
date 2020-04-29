@@ -13,7 +13,11 @@ import { Observable } from 'rxjs';
 export class PlantillainfoPage implements OnInit {
 
   id: any;
-  temp: 1;
+  cate: any;
+  temp: any;
+
+  process: any;
+  Res: any;
 
   PeligroE: Observable<PeligroE[]>;
 
@@ -22,18 +26,48 @@ export class PlantillainfoPage implements OnInit {
    }
 
   ngOnInit() {
-    this.PeligroE = this.dataService.getPeligroE();
     this.id = this.navParams.get('id');
-    console.log(this.id);
-  }
+    this.cate = this.navParams.get('cate');
+    console.log(this.cate);
 
+    this.Comprobar();
+  }
 
   CerrarModal() {
     this.modalCtrl.dismiss();
   }
 
-  uno() {
-    console.log(this.id);
+  Comprobar() {
+    if (this.cate == 'PE') {
+      this.temp = this.VerInfo();
+
+    }else if (this.cate == 'PR') {
+      this.temp = this.VerMapa();
+
+    }else if (this.cate == 'V') {
+      this.temp = this.VerVideo();
+    }
+
+    }
+
+    VerInfo() {
+      let element = document.getElementById('Info');
+
+      this.PeligroE = this.dataService.getPeligroE();
+
+      let content = `
+      <div *ngFor="let c of PeligroE | async">
+        <h2 *ngIf="c.id==id">{{ c.title }}</h2>
+      </div>
+      `
+    }
+
+    VerMapa() {
+    }
+
+    VerVideo(){
+
+    }
+
   }
 
-}

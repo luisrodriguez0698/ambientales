@@ -25,7 +25,7 @@
     {
         "icon": "game-controller",
         "name": "Desafio Ambiental",
-        "routerLink": "/"
+        "routerLink": "/desafio"
     },
     {
         "icon": "exit",

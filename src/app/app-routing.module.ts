@@ -18,6 +18,14 @@ const routes: Routes = [
   {
     path: 'ubiaciones',
     loadChildren: () => import('./pages/ubiaciones/ubiaciones.module').then( m => m.UbiacionesPageModule)
+  },
+  {
+    path: 'desafio/:id',
+    loadChildren: () => import('./pages/desafio/desafio.module').then( m => m.DesafioPageModule)
+  },
+  {
+    path: 'login',
+    loadChildren: () => import('./pages/login/login.module').then( m => m.LoginPageModule)
   }
 ];
 

@@ -43,24 +43,16 @@ export class Plantilla1Page implements OnInit {
     }
   }//fin del metodo
 
-  async AbrirModalInfo(id) {
+  async AbrirModalInfo(id, cate) {
     const modal = await this.modalCtrl.create({
       component: PlantillainfoPage,
       componentProps: {
-        id:id
+        id:id,
+        cate:cate
       }
     });
     return await modal.present();
   }
 
-  async AbrirModalvideo(id) {
-    const modal = await this.modalCtrl.create({
-      component: PlantillainfoPage,
-      componentProps: {
-        id:id
-      }
-    });
-    return await modal.present();
-  }
 
 }

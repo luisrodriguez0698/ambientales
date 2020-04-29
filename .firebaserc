@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "pambientales-210fa": {
+      "hosting": {
+        "app": [
+          "pambientales-210fa"
+        ]
+      }
+    }
+  }
+}

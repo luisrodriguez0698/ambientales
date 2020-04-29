@@ -1,0 +1,56 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-button (click)="toggleMenu()">
+                <ion-icon slot="icon-only" name="menu"></ion-icon>
+            </ion-button>
+        </ion-buttons>
+        <ion-title>DESAFIO AMBIENTAL</ion-title>
+        <ion-buttons slot="end">
+            <ion-back-button defaultHref="/"></ion-back-button>
+        </ion-buttons>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen>
+
+    <ion-slides>
+
+        <ion-slide>
+            <ion-list>
+
+                <ion-list-header>
+                    <ion-label>Fruit</ion-label>
+                </ion-list-header>
+
+                <ion-radio-group>
+                    <h3>pregunta 1</h3>
+                    <ion-item *ngFor="let a of p1">
+                        <ion-label>{{a.val}}</ion-label>
+                        <ion-radio slot="start" color="success" value="{{a.val}}"></ion-radio>
+                    </ion-item>
+                </ion-radio-group>
+
+            </ion-list>
+        </ion-slide>
+
+        <ion-slide>
+            <ion-list>
+
+                <ion-list-header>
+                    <ion-label>Fruit</ion-label>
+                </ion-list-header>
+
+                <ion-radio-group>
+                    <h3>pregunta 1</h3>
+                    <ion-item *ngFor="let b of p2">
+                        <ion-label>{{b.val}}</ion-label>
+                        <ion-radio slot="start" color="success" value="{{b.val}}"></ion-radio>
+                    </ion-item>
+                </ion-radio-group>
+
+            </ion-list>
+        </ion-slide>
+
+    </ion-slides>
+</ion-content>

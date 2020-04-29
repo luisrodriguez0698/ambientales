@@ -15,7 +15,7 @@
 <ion-content>
 
     <ion-item-group *ngFor="let c of temp | async">
-        <ion-card (click)="c.modal(c.id)">
+        <ion-card (click)="AbrirModalInfo(c.id, c.cate)">
             <img src="{{c.img}} " alt="imagen ">
             <ion-card-header>
                 <ion-card-subtitle>{{ c.subtitle }}</ion-card-subtitle>

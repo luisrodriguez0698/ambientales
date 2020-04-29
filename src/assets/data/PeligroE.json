@@ -1,26 +1,26 @@
 [{
         "titulo": "En peligro de extinción",
-        "modal": "AbrirModalInfo",
         "subtitle": "Probablemente extinta en el medio silvestre",
         "title": "Osos polares",
         "desc": "El aumento en las temperaturas del planeta como resultado del calentamiento global...",
         "img": "../../../assets/img/animales/oso-polar.png",
+        "cate": "PE",
         "id": "0"
     },
     {
-        "modal": "AbrirModalInfo",
         "subtitle": "Amenazadas",
         "title": "El rinoceronte blanco",
         "desc": "El rinoceronte blanco, con más de tres toneladas y aproximadamente cuatro metros de...",
         "img": "../../../assets/img/animales/rinoceronte-blanco.jpg",
+        "cate": "PE",
         "id": "1"
     },
     {
-        "modal": "AbrirModalInfo",
         "subtitle": "Sujetas a protección especial",
         "title": "Elefantes",
         "desc": "La venta ilegal de marfil es la principal razón que amenaza a las poblaciones...",
         "img": "../../../assets/img/animales/elefantes.jpg",
+        "cate": "PE",
         "id": "2"
     }
 ]
