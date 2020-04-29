@@ -25,7 +25,7 @@ export class PlantillainfoPage implements OnInit {
 
   PeligroE: Observable<PeligroE[]>;
   PuntosR: Observable<PuntosR[]>;
-  Coordenadas = []
+  Coordenadas = [];
 
 
   constructor(private activatedRoute: ActivatedRoute, private modalCtrl: ModalController, private navParams: NavParams, 
@@ -103,8 +103,14 @@ export class PlantillainfoPage implements OnInit {
   loadPoints() {
     this.markers = [];
 
-    for (const key of this.Coordenadas) {
-        console.log(key)
+    setTimeout(() => {
+
+    for (const key of this.Coordenadas ) {
+
+       if(key.id == this.id){
+
+      console.log(key.id)
+
       let latLng = new google.maps.LatLng(key.latitude, key.longitude);
 
       let marker = new google.maps.Marker({
@@ -112,31 +118,32 @@ export class PlantillainfoPage implements OnInit {
         title: key.name
       })
       let content = `
-      <ion-header>
-      <center>
-            <img src="../../../assets/icon/img/`+key.Imagen+`" alt="img" width="50%" height="100" align="middle">  
-      </center>
-      </ion-header>
+        <ion-header>
+        <center>
+              <img src="../../../assets/icon/img/`+key.Imagen+`" alt="img" width="50%" height="100" align="middle">  
+        </center>
+        </ion-header>
 
-      <div id="myid"  class="item item-thumbnail-left item-text-wrap">
-        <ion-item>
-        <ion-row>
-        <h6>`+key.name+`</h6>
-      </ion-row>
-      </ion-item><ion-row>
-        <h6>`+key.des+`</h6>
-      </ion-row>
-      </ion-item><ion-row>
-        <h6>`+key.tel+`</h6>
-      </ion-row>
-      </ion-item>
-      </div>
-      `
+        <div id="myid"  class="item item-thumbnail-left item-text-wrap">
+          <ion-item>
+          <ion-row>
+          <h6>`+key.name+`</h6>
+        </ion-row>
+        </ion-item><ion-row>
+          <h6>`+key.des+`</h6>
+        </ion-row>
+        </ion-item><ion-row>
+          <h6>`+key.tel+`</h6>
+        </ion-row>
+        </ion-item>
+        </div>
+        `
       ;
       this.addInfoWindow(marker, content);
       marker.setMap(this.map);
     }
-
+  }
+}, 1000);
     return this.markers;
   }
 
