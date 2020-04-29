@@ -25,7 +25,7 @@ export class PlantillainfoPage implements OnInit {
 
   PeligroE: Observable<PeligroE[]>;
   PuntosR: Observable<PuntosR[]>;
-  Coordenadas: Observable<Coordenadas[]>;
+  Coordenadas = []
 
 
   constructor(private activatedRoute: ActivatedRoute, private modalCtrl: ModalController, private navParams: NavParams, 
@@ -50,7 +50,9 @@ export class PlantillainfoPage implements OnInit {
       this.PeligroE = this.dataService.getPeligroE();
     } else if(this.cate == "PR"){
       this.PuntosR = this.dataService.getPuntosR();
-      this.Coordenadas = this.dataService.getCoordenadas();
+      this.dataService.getCoordenadas().subscribe((data) => {
+        this.Coordenadas = data;
+      });
 
       this.platform.ready().then(() => {
         this.initPage();
@@ -101,33 +103,33 @@ export class PlantillainfoPage implements OnInit {
   loadPoints() {
     this.markers = [];
 
-    for (const key of Object.keys(this.Coordenadas)) {
-
-      let latLng = new google.maps.LatLng(this.Coordenadas[key].latitude, this.Coordenadas[key].longitude);
+    for (const key of this.Coordenadas) {
+        console.log(key)
+      let latLng = new google.maps.LatLng(key.latitude, key.longitude);
 
       let marker = new google.maps.Marker({
         position: latLng,
-        title: this.Coordenadas[key].name
+        title: key.name
       })
 
 
       let content = `
       <ion-header>
       <center>
-            <img src="../../../assets/icon/img/`+this.Coordenadas[key].Imagen+`" alt="img" width="50%" height="100" align="middle">  
+            <img src="../../../assets/icon/img/`+key.Imagen+`" alt="img" width="50%" height="100" align="middle">  
       </center>
       </ion-header>
 
       <div id="myid"  class="item item-thumbnail-left item-text-wrap">
         <ion-item>
         <ion-row>
-        <h6>`+this.Coordenadas[key].name+`</h6>
+        <h6>`+key.name+`</h6>
       </ion-row>
       </ion-item><ion-row>
-        <h6>`+this.Coordenadas[key].des+`</h6>
+        <h6>`+key.des+`</h6>
       </ion-row>
       </ion-item><ion-row>
-        <h6>`+this.Coordenadas[key].tel+`</h6>
+        <h6>`+key.tel+`</h6>
       </ion-row>
       </ion-item>
       </div>
