@@ -9,8 +9,15 @@
 
 <ion-content>
 
-    <div id="Info">
-
+    <div id="Info" *ngFor="let c of PeligroE | async">
+        <h2 *ngIf="c.id==id">{{c.title}}</h2>
+        <p *ngIf="c.id==id">{{c.desc}}</p>
     </div>
+
+    <div id="Info" *ngFor="let c of PuntosR | async">
+        <h2 *ngIf="c.id==id">{{c.title}}</h2>
+        <p  *ngIf="c.id==id">Coordenadas</p>
+    </div> 
+
 
 </ion-content>

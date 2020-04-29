@@ -2,7 +2,7 @@ import { Component, OnInit, Input } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { ModalController, NavParams } from '@ionic/angular';
 import { DataService } from '../../services/data.service';
-import { PeligroE } from '../../interfaces/interfaces';
+import { PeligroE, PuntosR } from '../../interfaces/interfaces';
 import { Observable } from 'rxjs';
 
 @Component({
@@ -20,7 +20,7 @@ export class PlantillainfoPage implements OnInit {
   Res: any;
 
   PeligroE: Observable<PeligroE[]>;
-
+  PuntosR: Observable<PuntosR[]>;
   constructor(private activatedRoute: ActivatedRoute, private modalCtrl: ModalController, private navParams: NavParams, 
     private dataService: DataService) {
    }
@@ -28,7 +28,7 @@ export class PlantillainfoPage implements OnInit {
   ngOnInit() {
     this.id = this.navParams.get('id');
     this.cate = this.navParams.get('cate');
-    console.log(this.cate);
+   
 
     this.Comprobar();
   }
@@ -37,7 +37,21 @@ export class PlantillainfoPage implements OnInit {
     this.modalCtrl.dismiss();
   }
 
-  Comprobar() {
+  Comprobar(){
+    console.log(this.cate);
+    if (this.cate == "PE") {
+      this.PeligroE = this.dataService.getPeligroE();
+    }else if(this.cate == "PR"){
+      this.PuntosR = this.dataService.getPuntosR();
+    }
+  }
+
+  }
+
+
+
+  /*
+    Comprobar() {
     if (this.cate == 'PE') {
       this.temp = this.VerInfo();
 
@@ -69,5 +83,5 @@ export class PlantillainfoPage implements OnInit {
 
     }
 
-  }
-
+  
+  */
