@@ -1,26 +1,74 @@
 [{
         "titulo": "En peligro de extinción",
         "subtitle": "Probablemente extinta en el medio silvestre",
-        "title": "Osos polares",
-        "desc": "El aumento en las temperaturas del planeta como resultado del calentamiento global...",
-        "img": "../../../assets/img/animales/oso-polar.png",
+        "title": "Reno o caribú",
+        "desc": "El reno habita en Europa y el caribú en América del Norte y Groenlandia. La amenaza de esta especie radica en la dificultad que tienen para sobrevivir a veranos cada vez más largos y calurosos.",
+        "img": "../../../assets/img/animales/Reno_o_caribu.jpg",
         "cate": "PE",
         "id": "0"
     },
     {
         "subtitle": "Amenazadas",
-        "title": "El rinoceronte blanco",
-        "desc": "El rinoceronte blanco, con más de tres toneladas y aproximadamente cuatro metros de...",
-        "img": "../../../assets/img/animales/rinoceronte-blanco.jpg",
+        "title": "Pica americana",
+        "desc": "La pica americana es un pequeño mamífero relacionado con la familia de los conejos,  que se encuentra principalmente en las montañas del oeste de Estados Unidos y el sur de Canadá. Esta especie es muy sensible a los cambios de temperatura y, según los expertos, no pueden sobrevivir a más de 25° C.",
+        "img": "../../../assets/img/animales/Pica_americana.JPG",
         "cate": "PE",
         "id": "1"
     },
     {
         "subtitle": "Sujetas a protección especial",
-        "title": "Elefantes",
-        "desc": "La venta ilegal de marfil es la principal razón que amenaza a las poblaciones...",
-        "img": "../../../assets/img/animales/elefantes.jpg",
+        "title": "Panda gigante",
+        "desc": "El panda gigante se ve amenazado por una gran cantidad de factores, Fundamentalmente porque el cambio climático está afectando su principal fuente de alimento, que es el bosque de bambú. A su vez, su reproducción se ve más comprometida aún debido a que existen pocas poblaciones de pandas que están relativamente aisladas, a grandes distancias entre sí. ",
+        "img": "../../../assets/img/animales/Panda_gigante.jpg",
         "cate": "PE",
         "id": "2"
+    },
+    {
+        "subtitle": "Sujetas a protección especial",
+        "title": "Tigre asiático",
+        "desc": "Los expertos indican que quedan apenas 3.200 tigres en la naturaleza aparte de los cautivos en zoológicos y reservas. La caza furtiva, pero principalmente el deterioro de su hábitat y la disminución de sus fuentes de alimento son las mayores amenazas para la supervivencia de la especie.",
+        "img": "../../../assets/img/animales/Tigre-asiático.jpg",
+        "cate": "PE",
+        "id": "3"
+    },
+    {
+        "subtitle": "Sujetas a protección especial",
+        "title": "Orangután",
+        "desc": "Los orangutanes habitan en la selva tropical de Indonesia, zona que desde hace décadas se ve duramente golpeada por el calentamiento global. Las largas épocas de sequía provocan cada vez más frecuentemente grandes incendios forestales que acaban con la vida y el hábitat del orangután. ",
+        "img": "../../../assets/img/animales/Orangután.jpeg",
+        "cate": "PE",
+        "id": "4"
+    },
+    {
+        "subtitle": "Sujetas a protección especial",
+        "title": "Buey almizclado",
+        "desc": "También conocido como toro almizclero, es un gran mamífero que habita en las zonas preglaciares, es decir al borde del círculo polar ártico.  Se encuentran principalmente en el norte de Canadá y Groenlandia y en menor medida el norte de Europa y algunas zonas del norte de Rusia. Se encuentran amenazados por la creciente duración e intensidad de los veranos. ",
+        "img": "../../../assets/img/animales/Buey_almizclado.jpg",
+        "cate": "PE",
+        "id": "5"
+    },
+    {
+        "subtitle": "Sujetas a protección especial",
+        "title": "Pósums",
+        "desc": "Los pósums son pequeños roedores que viven en los climas fríos de lo alto de las montañas. Se caracterizan por ser muy sensibles a los cambios de temperatura y se cree que una subespecie ya se puede haber extinto por completo. El pósum tipo-lémur blanco no es visto desde el año 2005 y se estima que puede ser el primer mamífero extinto a causa del cambio climático.",
+        "img": "../../../assets/img/animales/Pósums.jpg",
+        "cate": "PE",
+        "id": "6"
+    },
+    {
+        "subtitle": "Sujetas a protección especial",
+        "title": "Elefante africano",
+        "desc": "El elefante africano se ve gravemente comprometido por el cambio climático. Los crueles y largos períodos de sequía disminuyen dramáticamente su fuente de alimento y ponen en peligro su supervivencia.  ",
+        "img": "../../../assets/img/animales/Elefante_africano.jpg",
+        "cate": "PE",
+        "id": "7"
+    },
+    {
+        "subtitle": "Sujetas a protección especial",
+        "title": "Ranas",
+        "desc": "Las ranas, en el sentido amplio, son anfibios de sangre fría y piel muy fina, esto los hace ser realmente muy sensibles a los cambios de temperatura. Un tercio de las más de 6.000 especies conocidas de anfibios se encuentran en peligro de extinción a causa del calentamiento global, el deterioro del hábitat y la polución. ",
+        "img": "../../../assets/img/animales/Ranas.jpg",
+        "cate": "PE",
+        "id": "8"
     }
 ]

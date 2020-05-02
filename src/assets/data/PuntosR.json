@@ -1,20 +1,66 @@
 [{
         "titulo": "Puntos de Reciclaje",
-        "routerLink": "/ubiaciones",
-        "subtitle": "PuntosR",
-        "title": "PuntosR",
+        "subtitle": "Subtitile",
+        "title": "RECUPERADORA DE METALES",
         "desc": "este es un animal en peligro de extincion",
-        "img": "../../../assets/img/animales/tigre.jpg",
+        "img": "../../../assets/img/PuntosReciclaje/RM.jpg",
         "cate": "PR",
         "id": "0"
     },
     {
-        "subtitle": "PuntosR 2",
-        "title": "PuntosR 2",
-        "routerLink": "/ubiaciones",
+        "subtitle": "Subtitile",
+        "title": "COMPRA Y VENTA DE PRODUCTOS RECICLADOS",
         "desc": "este es un animal en peligro de extincion 2",
-        "img": "../../../assets/img/animales/tigre.jpg",
+        "img": "../../../assets/img/PuntosReciclaje/PR.jpg",
         "cate": "PR",
         "id": "1"
+    },
+    {
+        "subtitle": "Subtitile",
+        "title": "RECUPERACIÓN DE DESECHOS SÓLIDOS",
+        "desc": "este es un animal en peligro de extincion 2",
+        "img": "../../../assets/img/PuntosReciclaje/RECDESECHOS.jpg",
+        "cate": "PR",
+        "id": "2"
+    },
+    {
+        "subtitle": "Subtitile",
+        "title": "COMPRA DE CHATARRA",
+        "desc": "este es un animal en peligro de extincion 2",
+        "img": "../../../assets/img/PuntosReciclaje/CC.png",
+        "cate": "PR",
+        "id": "3"
+    },
+    {
+        "subtitle": "Subtitile",
+        "title": "RECICLADORA DE PLÁSTICOS",
+        "desc": "este es un animal en peligro de extincion 2",
+        "img": "../../../assets/img/PuntosReciclaje/RPL.jpg",
+        "cate": "PR",
+        "id": "4"
+    },
+    {
+        "subtitle": "Subtitile",
+        "title": "COMPRA DE DESPERDICIOS INDUSTRIALES",
+        "desc": "este es un animal en peligro de extincion 2",
+        "img": "../../../assets/img/PuntosReciclaje/DI.jpg",
+        "cate": "PR",
+        "id": "5"
+    },
+    {
+        "subtitle": "Subtitile",
+        "title": "COMPRA DE PET",
+        "desc": "este es un animal en peligro de extincion 2",
+        "img": "../../../assets/img/PuntosReciclaje/CPET.jfif",
+        "cate": "PR",
+        "id": "6"
+    },
+    {
+        "subtitle": "Subtitile",
+        "title": "RECICLADORA LA CARTONERA",
+        "desc": "este es un animal en peligro de extincion 2",
+        "img": "../../../assets/img/PuntosReciclaje/CCarton.jpg",
+        "cate": "PR",
+        "id": "7"
     }
 ]

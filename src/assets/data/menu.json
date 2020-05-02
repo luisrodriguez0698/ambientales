@@ -23,8 +23,8 @@
         "id": "Videos"
     },
     {
-        "icon": "game-controller",
-        "name": "Desafio Ambiental",
+        "icon": "help-outline",
+        "name": "¿Sabías Que?",
         "routerLink": "/desafio"
     }
 ]
