@@ -13,7 +13,7 @@ export class DesafioPage implements OnInit {
 
   componentes: Componente[] = [];
 
-  constructor(private menuCtrl: MenuController, public videoplayer: VideoPlayer) { }
+  constructor(private menuCtrl: MenuController, private videoPlayer: VideoPlayer) { }
 
   ngOnInit() {
   }
@@ -22,16 +22,28 @@ export class DesafioPage implements OnInit {
     this.menuCtrl.toggle();
   }
 
-  Video1(){
-    this.videoplayer.play("/assets/videos/assets/botellas.mp4")
+   Video1() {
+    this.videoPlayer.play('https://www.youtube.com/watch?v=GlGycs7YJO8').then(() => {
+    console.log('video completed');
+    }).catch(err => {
+    console.log(err);
+    });
   }
 
-  Video2(){
-    this.videoplayer.play("/assets/videos/assets/floresdepapel.mp4")
+  Video2() {
+   this.videoPlayer.play('../../assets/videos/assets/video3.mp4').then(() => {
+    console.log('video completed');
+    }).catch(err => {
+    console.log(err);
+    });
   }
 
-  Video3(){
-    this.videoplayer.play("/assets/videos/assets/video3.mp4")
+  Video3() {
+   this.videoPlayer.play('../../assets/videos/assets/video3.mp4').then(() => {
+    console.log('video completed');
+    }).catch(err => {
+    console.log(err);
+    });
   }
 
 }

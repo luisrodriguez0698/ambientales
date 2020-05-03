@@ -120,22 +120,15 @@ export class PlantillainfoPage implements OnInit {
       let content = `
         <ion-header>
         <center>
-              <img src="../../../assets/icon/img/`+key.Imagen+`" alt="img" width="50%" height="100" align="middle">  
+          <h6>`+key.name+`</h6>
         </center>
         </ion-header>
 
         <div id="myid"  class="item item-thumbnail-left item-text-wrap">
-          <ion-item>
-          <ion-row>
-          <h6>`+key.name+`</h6>
-        </ion-row>
-        </ion-item><ion-row>
+
+        <ion-row>
           <h6>`+key.des+`</h6>
         </ion-row>
-        </ion-item><ion-row>
-          <h6>`+key.tel+`</h6>
-        </ion-row>
-        </ion-item>
         </div>
         `
       ;
