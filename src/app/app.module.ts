@@ -10,12 +10,13 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { ComponentsModule } from './components/components.module';
 import { HttpClientModule } from '@angular/common/http';
-import { VideoPlayer } from '@ionic-native/video-player/ngx';
 import { Geolocation } from '@ionic-native/geolocation/ngx';
 
 import { environment } from "../environments/environment";
 import { AngularFireModule } from "@angular/fire";
 import { AngularFireAuthModule } from "@angular/fire/auth";
+import { YoutubeVideoPlayer } from '@ionic-native/youtube-video-player/ngx';
+
 
 @NgModule({
   declarations: [AppComponent],
@@ -32,8 +33,8 @@ import { AngularFireAuthModule } from "@angular/fire/auth";
   providers: [
     StatusBar,
     SplashScreen,
+    YoutubeVideoPlayer,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
-    VideoPlayer,
     Geolocation
   ],
   bootstrap: [AppComponent]
