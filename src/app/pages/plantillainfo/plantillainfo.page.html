@@ -10,6 +10,7 @@
 <ion-content>
 
     <div id="Info" *ngFor="let c of PeligroE | async">
+        <img class="img" *ngIf="c.id==id" src="{{ c.img }}" alt="imagen">
         <h2 *ngIf="c.id==id">{{c.title}}</h2>
         <p *ngIf="c.id==id">{{c.desc}}</p>
     </div>
@@ -20,8 +21,6 @@
     </div-->
 
     <div id="mape">
-
     </div>
-
 
 </ion-content>

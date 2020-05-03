@@ -5,6 +5,7 @@ import { PuntosR } from '../interfaces/interfaces';
 import { PeligroE } from '../interfaces/interfaces';
 import { Videos } from '../interfaces/interfaces';
 import { Coordenadas } from '../interfaces/interfaces';
+import { SabiasQue } from '../interfaces/interfaces';
 
 @Injectable({
   providedIn: 'root'
@@ -31,5 +32,9 @@ export class DataService {
 
   getCoordenadas() {
     return this.http.get<Coordenadas[]>('assets/data/Coordenadas.json');
+  }
+
+  getSabiasQue() {
+    return this.http.get<SabiasQue[]>('assets/data/sabiasQue.json');
   }
 }

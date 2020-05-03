@@ -24,7 +24,8 @@
     },
     {
         "icon": "help-outline",
-        "name": "¿Sabías Que?",
-        "routerLink": "/desafio"
+        "name": "Sabias Que",
+        "routerLink": "/sabiasque",
+        "id": "sq"
     }
 ]

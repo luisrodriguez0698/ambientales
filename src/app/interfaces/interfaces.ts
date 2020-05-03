@@ -45,3 +45,13 @@ export interface Coordenadas {
     Imagen: any;
     id: any;
 }
+
+export interface SabiasQue {
+    titulo: string;
+    routerLink: string;
+    title: string;
+    desc: string;
+    img: string;
+    id: string;
+    modal: string;
+}
