@@ -20,7 +20,7 @@ export class VideosPage implements OnInit {
     this.id2 = this.activatedRoute.snapshot.paramMap.get('id');
   }
 
-  toggleMenu(){
+  toggleMenu() {
     this.menuCtrl.toggle();
   }
 

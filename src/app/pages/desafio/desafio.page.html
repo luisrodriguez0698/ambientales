@@ -5,52 +5,49 @@
                 <ion-icon slot="icon-only" name="menu"></ion-icon>
             </ion-button>
         </ion-buttons>
-        <ion-title>DESAFIO AMBIENTAL</ion-title>
+        <ion-title>Videos</ion-title>
         <ion-buttons slot="end">
-            <ion-back-button defaultHref="/"></ion-back-button>
+            <ion-back-button defaultHref="/inicio"></ion-back-button>
         </ion-buttons>
     </ion-toolbar>
 </ion-header>
 
-<ion-content fullscreen>
+<ion-content>
 
-    <ion-slides>
+    <ion-card>
+        <ion-img src="/assets/videos/miniaturas/botellas.jpg"></ion-img>
+        <ion-card-content>
+            <ion-card-header>
+                <ion-card-title>Manualidades de boteellas</ion-card-title>
+            </ion-card-header>
+            <ion-item>
+                <ion-button (click)="Video1()" fill="solid">Ver Video</ion-button>
+            </ion-item>
+        </ion-card-content>
+    </ion-card>
 
-        <ion-slide>
-            <ion-list>
+    <ion-card>
+        <ion-img src="/assets/videos/miniaturas/papel.png"></ion-img>
+        <ion-card-content>
+            <ion-card-header>
+                <ion-card-title>Manualidades de boteellas</ion-card-title>
+            </ion-card-header>
+            <ion-item>
+                <ion-button (click)="Video2()" fill="solid">Ver Video</ion-button>
+            </ion-item>
+        </ion-card-content>
+    </ion-card>
 
-                <ion-list-header>
-                    <ion-label>Fruit</ion-label>
-                </ion-list-header>
+    <ion-card>
+        <ion-img src="/assets/videos/miniaturas/pnecil.jpg"></ion-img>
+        <ion-card-content>
+            <ion-card-header>
+                <ion-card-title>Manualidades de boteellas</ion-card-title>
+            </ion-card-header>
+            <ion-item>
+                <ion-button (click)="Video3()" fill="solid">Ver Video</ion-button>
+            </ion-item>
+        </ion-card-content>
+    </ion-card>
 
-                <ion-radio-group>
-                    <h3>pregunta 1</h3>
-                    <ion-item *ngFor="let a of p1">
-                        <ion-label>{{a.val}}</ion-label>
-                        <ion-radio slot="start" color="success" value="{{a.val}}"></ion-radio>
-                    </ion-item>
-                </ion-radio-group>
-
-            </ion-list>
-        </ion-slide>
-
-        <ion-slide>
-            <ion-list>
-
-                <ion-list-header>
-                    <ion-label>Fruit</ion-label>
-                </ion-list-header>
-
-                <ion-radio-group>
-                    <h3>pregunta 1</h3>
-                    <ion-item *ngFor="let b of p2">
-                        <ion-label>{{b.val}}</ion-label>
-                        <ion-radio slot="start" color="success" value="{{b.val}}"></ion-radio>
-                    </ion-item>
-                </ion-radio-group>
-
-            </ion-list>
-        </ion-slide>
-
-    </ion-slides>
 </ion-content>

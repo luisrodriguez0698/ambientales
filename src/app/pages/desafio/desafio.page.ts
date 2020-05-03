@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Componente } from '../../interfaces/interfaces';
 import { Observable } from 'rxjs';
 import { MenuController } from '@ionic/angular';
+import { VideoPlayer } from '@ionic-native/video-player/ngx';
 
 @Component({
   selector: 'app-desafio',
@@ -12,7 +13,7 @@ export class DesafioPage implements OnInit {
 
   componentes: Componente[] = [];
 
-  constructor(private menuCtrl: MenuController) { }
+  constructor(private menuCtrl: MenuController, public videoplayer: VideoPlayer) { }
 
   ngOnInit() {
   }
@@ -21,18 +22,16 @@ export class DesafioPage implements OnInit {
     this.menuCtrl.toggle();
   }
 
-  public p1 = [
-    { val: 'opcion 1'},
-    { val: 'opcion 2'},
-    { val: 'opcion 3'},
-    { val: 'opcion 4'}
-  ];
+  Video1(){
+    this.videoplayer.play("/assets/videos/assets/botellas.mp4")
+  }
 
-  public p2 = [
-    { val: 'opcion 1'},
-    { val: 'opcion 2'},
-    { val: 'opcion 3'},
-    { val: 'opcion 4'}
-  ];
+  Video2(){
+    this.videoplayer.play("/assets/videos/assets/floresdepapel.mp4")
+  }
+
+  Video3(){
+    this.videoplayer.play("/assets/videos/assets/video3.mp4")
+  }
 
 }

@@ -1,6 +1,5 @@
 <ion-header>
     <ion-toolbar>
-        <ion-title>plantilla info</ion-title>
         <ion-buttons slot="end">
             <ion-button (click)="CerrarModal()">Cerrar</ion-button>
         </ion-buttons>
@@ -10,8 +9,8 @@
 <ion-content>
 
     <div id="Info" *ngFor="let c of PeligroE | async">
-        <img class="img" *ngIf="c.id==id" src="{{ c.img }}" alt="imagen">
         <h2 *ngIf="c.id==id">{{c.title}}</h2>
+        <img class="img" *ngIf="c.id==id" src="{{ c.img }}" alt="imagen">
         <p *ngIf="c.id==id">{{c.desc}}</p>
     </div>
 
