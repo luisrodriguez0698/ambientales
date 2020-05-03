@@ -1,9 +1,23 @@
 #mape {
     width: 100%;
-    height: 400px;
+    height: 300px;
 }
 
 .img {
     width: 100%;
     height: 60%;
+}
+
+#Info {
+    margin: 10px 10px 0 10px;
+}
+
+#Info h2 {
+    text-align: center;
+}
+
+#Info p {
+    width: 90%;
+    text-align: justify;
+    margin: 10px auto 0 auto;
 }

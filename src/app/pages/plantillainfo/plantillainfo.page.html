@@ -19,7 +19,13 @@
         <p *ngIf="c.id==id">Coordenadas</p>
     </div-->
 
+
+    <div id="Info" *ngFor="let P of PuntosR | async">
+        <h2 *ngIf=" P.id==id ">{{P.title}}</h2>
+    </div>
+
     <div id="mape">
     </div>
+
 
 </ion-content>

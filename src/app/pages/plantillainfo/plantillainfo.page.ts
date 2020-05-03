@@ -37,7 +37,6 @@ export class PlantillainfoPage implements OnInit {
     this.cate = this.navParams.get('cate');
 
     this.Comprobar();
-
   }
 
   CerrarModal() {
